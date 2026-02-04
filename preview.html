@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdeathonBcn - Design Variants</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: system-ui, sans-serif;
+            background: #1a1a1a;
+            color: white;
+            min-height: 100vh;
+        }
+        .selector {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #000;
+            padding: 1rem 2rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            z-index: 10000;
+            border-bottom: 2px solid #333;
+        }
+        .selector h1 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-right: auto;
+        }
+        .variant-btn {
+            padding: 0.75rem 1.5rem;
+            background: #333;
+            border: none;
+            color: white;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .variant-btn:hover {
+            background: #555;
+        }
+        .variant-btn.active {
+            background: #E63B2E;
+        }
+        .preview-frame {
+            width: 100%;
+            height: calc(100vh - 60px);
+            margin-top: 60px;
+            border: none;
+        }
+        .info {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            background: rgba(0,0,0,0.9);
+            padding: 1.5rem;
+            max-width: 350px;
+            border: 1px solid #333;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            z-index: 10001;
+        }
+        .info h2 {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            color: #FFCC00;
+        }
+        .info p {
+            color: #aaa;
+            margin-bottom: 0.5rem;
+        }
+        .info strong {
+            color: white;
+        }
+        .close-info {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: none;
+            border: none;
+            color: #666;
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+        .close-info:hover { color: white; }
+    </style>
+</head>
+<body>
+    <div class="selector">
+        <h1>IdeathonBcn Design Variants</h1>
+        <button class="variant-btn active" data-variant="1">V1: Bauhaus Barcelona</button>
+        <button class="variant-btn" data-variant="2">V2: Mediterranean Grid</button>
+        <button class="variant-btn" data-variant="3">V3: Graphic Brutalist</button>
+    </div>
+
+    <iframe id="preview" class="preview-frame" src="index.html"></iframe>
+
+    <div class="info" id="info">
+        <button class="close-info" onclick="document.getElementById('info').style.display='none'">&times;</button>
+        <h2 id="info-title">V1: Bauhaus Barcelona</h2>
+        <p id="info-desc"><strong>Font:</strong> Darker Grotesque</p>
+        <p><strong>Vibe:</strong> Bold primary colors, strict bento grid, geometric shapes. Classic Bauhaus meets Barcelona warmth.</p>
+    </div>
+
+    <script>
+        const variants = {
+            1: {
+                title: 'V1: Bauhaus Barcelona',
+                font: 'Darker Grotesque',
+                desc: 'Bold primary colors, strict bento grid, geometric shapes. Classic Bauhaus meets Barcelona warmth.'
+            },
+            2: {
+                title: 'V2: Mediterranean Grid',
+                font: 'Outfit',
+                desc: 'Softer Mediterranean palette, rounded corners, asymmetric bento. Modern and approachable.'
+            },
+            3: {
+                title: 'V3: Graphic Brutalist',
+                font: 'Bebas Neue + DM Sans',
+                desc: 'High contrast, dense bento, overlapping elements. Maximum visual impact, poster-like.'
+            }
+        };
+
+        const btns = document.querySelectorAll('.variant-btn');
+        const iframe = document.getElementById('preview');
+        const infoTitle = document.getElementById('info-title');
+        const infoDesc = document.getElementById('info-desc');
+        const info = document.getElementById('info');
+
+        function switchVariant(v) {
+            // Update buttons
+            btns.forEach(b => b.classList.remove('active'));
+            document.querySelector(`[data-variant="${v}"]`).classList.add('active');
+
+            // Update info
+            infoTitle.textContent = variants[v].title;
+            infoDesc.innerHTML = `<strong>Font:</strong> ${variants[v].font}<br><strong>Vibe:</strong> ${variants[v].desc}`;
+            info.style.display = 'block';
+
+            // Update iframe stylesheet
+            iframe.contentWindow.postMessage({ variant: v }, '*');
+        }
+
+        btns.forEach(btn => {
+            btn.addEventListener('click', () => switchVariant(btn.dataset.variant));
+        });
+
+        // Listen for iframe load
+        iframe.addEventListener('load', () => {
+            // Inject variant switcher into iframe
+            const doc = iframe.contentDocument;
+            const link = doc.querySelector('link[rel="stylesheet"]');
+
+            // Add all variant stylesheets
+            const v1 = doc.createElement('link');
+            v1.rel = 'stylesheet';
+            v1.href = 'styles-v1.css';
+            v1.id = 'variant-1';
+            doc.head.appendChild(v1);
+
+            const v2 = doc.createElement('link');
+            v2.rel = 'stylesheet';
+            v2.href = 'styles-v2.css';
+            v2.id = 'variant-2';
+            v2.disabled = true;
+            doc.head.appendChild(v2);
+
+            const v3 = doc.createElement('link');
+            v3.rel = 'stylesheet';
+            v3.href = 'styles-v3.css';
+            v3.id = 'variant-3';
+            v3.disabled = true;
+            doc.head.appendChild(v3);
+
+            // Disable original stylesheet
+            if (link) link.disabled = true;
+        });
+
+        // Handle messages from parent
+        window.addEventListener('message', (e) => {
+            if (e.data.variant) {
+                const doc = iframe.contentDocument;
+                [1, 2, 3].forEach(v => {
+                    const sheet = doc.getElementById(`variant-${v}`);
+                    if (sheet) sheet.disabled = (v !== parseInt(e.data.variant));
+                });
+            }
+        });
+
+        // Also handle direct clicks
+        btns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const v = parseInt(btn.dataset.variant);
+                const doc = iframe.contentDocument;
+                [1, 2, 3].forEach(num => {
+                    const sheet = doc.getElementById(`variant-${num}`);
+                    if (sheet) sheet.disabled = (num !== v);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

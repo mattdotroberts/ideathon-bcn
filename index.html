@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdeathonBcn - Where Barcelona Builds</title>
+    <meta name="description" content="A one-day hackathon connecting Barcelona's SMBs with developers, consultants, and strategists. March 23rd, 2025.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <nav class="lang-nav">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="ca">CA</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-mosaic"></div>
+        <div class="hero-content">
+            <p class="hero-date" data-i18n="hero.date">23 MARCH 2025 · POBLENOU, BARCELONA</p>
+            <h1 class="hero-title">
+                <span class="title-line" data-i18n="hero.title1">Where Barcelona</span>
+                <span class="title-line title-accent" data-i18n="hero.title2">Builds</span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">One day. Real problems. Real solutions. SMBs meet builders.</p>
+
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label" data-i18n="countdown.days">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label" data-i18n="countdown.hours">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label" data-i18n="countdown.minutes">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label" data-i18n="countdown.seconds">Seconds</span>
+                </div>
+            </div>
+
+            <div class="hero-ctas">
+                <a href="#apply-business" class="btn btn-primary" data-i18n="hero.ctaBusiness">I'm a Business</a>
+                <a href="#apply-builder" class="btn btn-secondary" data-i18n="hero.ctaBuilder">I'm a Builder</a>
+                <a href="#sponsors" class="btn btn-outline" data-i18n="hero.ctaSponsor">Become a Partner</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span data-i18n="hero.scroll">Scroll to explore</span>
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- What Section -->
+    <section class="section section-what" id="what">
+        <div class="container">
+            <div class="what-grid">
+                <div class="what-text">
+                    <h2 class="section-title" data-i18n="what.title">The Idea</h2>
+                    <p class="what-lead" data-i18n="what.lead">Barcelona's small businesses have problems. Barcelona's builders have solutions. We bring them together.</p>
+                    <p data-i18n="what.p1">IdeathonBcn is a one-day matchmaking hackathon. We pair SMBs facing real operational challenges—HR, onboarding, project management, automation—with developers, consultants, strategists, and designers who can help scope and prototype solutions.</p>
+                    <p data-i18n="what.p2">By the end of the day, businesses leave with clarity: what to build, which technology to use, and who might help them build it. Builders leave with connections, contracts, and the satisfaction of solving real problems.</p>
+                </div>
+                <div class="what-visual">
+                    <div class="mosaic-card">
+                        <div class="mosaic-piece mosaic-1"></div>
+                        <div class="mosaic-piece mosaic-2"></div>
+                        <div class="mosaic-piece mosaic-3"></div>
+                        <div class="mosaic-piece mosaic-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Props Section -->
+    <section class="section section-value" id="value">
+        <div class="container">
+            <h2 class="section-title section-title-center" data-i18n="value.title">What's In It For You</h2>
+
+            <div class="value-tabs">
+                <button class="value-tab active" data-tab="business" data-i18n="value.tabBusiness">Businesses</button>
+                <button class="value-tab" data-tab="builder" data-i18n="value.tabBuilder">Builders</button>
+                <button class="value-tab" data-tab="sponsor" data-i18n="value.tabSponsor">Partners</button>
+            </div>
+
+            <div class="value-content">
+                <div class="value-panel active" data-panel="business">
+                    <div class="value-list">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            </div>
+                            <div>
+                                <h3 data-i18n="value.business.item1.title">Fresh Perspectives</h3>
+                                <p data-i18n="value.business.item1.desc">Get outside eyes on problems you've been staring at for months</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            </div>
+                            <div>
+                                <h3 data-i18n="value.business.item2.title">Technology Clarity</h3>
+                                <p data-i18n="value.business.item2.desc">Understand what AI and automation can actually do for your business</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <div>
+                                <h3 data-i18n="value.business.item3.title">Meet Your Future Team</h3>
+                                <p data-i18n="value.business.item3.desc">Find developers and consultants you might want to hire</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            </div>
+                            <div>
+                                <h3 data-i18n="value.business.item4.title">Learn From Peers</h3>
+                                <p data-i18n="value.business.item4.desc">See how other businesses are solving similar problems</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-panel" data-panel="builder">
+                    <div class="value-list">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            </div>
+                            <div>
+                                <h3 data-i18n="value.builder.item1.title">Real Client Access</h3>
+                                <p data-i18n="value.builder.item1.desc">Connect directly with Barcelona SMBs who need your skills</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            </div>
+                            <div>
+                                <h3 data-i18n="value.builder.item2.title">Potential Contracts</h3>
+                                <p data-i18n="value.builder.item2.desc">Turn a day of building into ongoing work</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <div>
+                                <h3 data-i18n="value.builder.item3.title">Level Up</h3>
+                                <p data-i18n="value.builder.item3.desc">Learn from experts—technical skills and client management</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            </div>
+                            <div>
+                                <h3 data-i18n="value.builder.item4.title">Network Effect</h3>
+                                <p data-i18n="value.builder.item4.desc">Meet other builders in Barcelona's tech ecosystem</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-panel" data-panel="sponsor">
+                    <div class="value-list">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </div>
+                            <div>
+                                <h3 data-i18n="value.sponsor.item1.title">Product Visibility</h3>
+                                <p data-i18n="value.sponsor.item1.desc">Your APIs and tools integrated into live builds</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+                            </div>
+                            <div>
+                                <h3 data-i18n="value.sponsor.item2.title">Press & Social</h3>
+                                <p data-i18n="value.sponsor.item2.desc">Coverage across local and national tech media</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                            </div>
+                            <div>
+                                <h3 data-i18n="value.sponsor.item3.title">Keynote & Workshops</h3>
+                                <p data-i18n="value.sponsor.item3.desc">Speaking slots and hands-on product demos</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                            </div>
+                            <div>
+                                <h3 data-i18n="value.sponsor.item4.title">Embed Your Team</h3>
+                                <p data-i18n="value.sponsor.item4.desc">Your people working alongside the builders</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section section-how" id="how">
+        <div class="container">
+            <h2 class="section-title" data-i18n="how.title">How It Works</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span>9:00</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="how.step1.title">Ideation</h3>
+                        <p data-i18n="how.step1.desc">Draw out problems. Map AI & automation opportunities. Generate solution ideas with your matched team.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span>12:00</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="how.step2.title">Scope</h3>
+                        <p data-i18n="how.step2.desc">Pick 1-2 ideas. Define the MVP. Plan the build.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span>13:00</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="how.step3.title">Build</h3>
+                        <p data-i18n="how.step3.desc">Hands on keyboards. Prototype your solution. Midday showcase to share progress and steal ideas.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span>18:00</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="how.step4.title">Demo</h3>
+                        <p data-i18n="how.step4.desc">Showcase your solution. Local entrepreneurs and product builders judge the best ideas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- People Section -->
+    <section class="section section-people" id="people">
+        <div class="container">
+            <h2 class="section-title section-title-center" data-i18n="people.title">The People</h2>
+
+            <div class="people-category">
+                <h3 class="people-subtitle" data-i18n="people.experts">Experts & Mentors</h3>
+                <div class="people-grid">
+                    <div class="person-card">
+                        <div class="person-image" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face')"></div>
+                        <h4>Expert Name</h4>
+                        <p>Company / Role</p>
+                    </div>
+                    <div class="person-card">
+                        <div class="person-image" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&crop=face')"></div>
+                        <h4>Expert Name</h4>
+                        <p>Company / Role</p>
+                    </div>
+                    <div class="person-card">
+                        <div class="person-image" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face')"></div>
+                        <h4>Expert Name</h4>
+                        <p>Company / Role</p>
+                    </div>
+                    <div class="person-card person-card-cta">
+                        <a href="#apply-builder" data-i18n="people.beExpert">Be an Expert →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="people-category">
+                <h3 class="people-subtitle" data-i18n="people.judges">Judges</h3>
+                <div class="people-grid">
+                    <div class="person-card">
+                        <div class="person-image" style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face')"></div>
+                        <h4>Judge Name</h4>
+                        <p>Entrepreneur</p>
+                    </div>
+                    <div class="person-card">
+                        <div class="person-image" style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=face')"></div>
+                        <h4>Judge Name</h4>
+                        <p>Product Builder</p>
+                    </div>
+                    <div class="person-card">
+                        <div class="person-image" style="background-image: url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop&crop=face')"></div>
+                        <h4>Judge Name</h4>
+                        <p>Investor</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="people-category">
+                <h3 class="people-subtitle" data-i18n="people.businesses">Participating Businesses</h3>
+                <div class="people-grid">
+                    <div class="person-card business-card">
+                        <div class="person-image" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=300&h=300&fit=crop')"></div>
+                        <h4>Business Name</h4>
+                        <p>Industry</p>
+                    </div>
+                    <div class="person-card business-card">
+                        <div class="person-image" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=300&h=300&fit=crop')"></div>
+                        <h4>Business Name</h4>
+                        <p>Industry</p>
+                    </div>
+                    <div class="person-card person-card-cta">
+                        <a href="#apply-business" data-i18n="people.applyBusiness">Apply as Business →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section class="section section-sponsors" id="sponsors">
+        <div class="container">
+            <h2 class="section-title section-title-center" data-i18n="sponsors.title">Partners</h2>
+
+            <div class="sponsor-tiers">
+                <div class="sponsor-tier sponsor-tier-gold">
+                    <h3 data-i18n="sponsors.gold">Gold Partners</h3>
+                    <div class="sponsor-logos sponsor-logos-large">
+                        <div class="sponsor-placeholder" data-i18n="sponsors.yourLogo">Your Logo Here</div>
+                    </div>
+                    <ul class="sponsor-benefits">
+                        <li data-i18n="sponsors.goldBenefit1">Keynote speaking slot</li>
+                        <li data-i18n="sponsors.goldBenefit2">Workshop session</li>
+                        <li data-i18n="sponsors.goldBenefit3">Team embedded in builds</li>
+                        <li data-i18n="sponsors.goldBenefit4">Prime logo placement</li>
+                    </ul>
+                </div>
+
+                <div class="sponsor-tier sponsor-tier-silver">
+                    <h3 data-i18n="sponsors.silver">Silver Partners</h3>
+                    <div class="sponsor-logos sponsor-logos-medium">
+                        <div class="sponsor-placeholder" data-i18n="sponsors.yourLogo">Your Logo Here</div>
+                        <div class="sponsor-placeholder" data-i18n="sponsors.yourLogo">Your Logo Here</div>
+                    </div>
+                    <ul class="sponsor-benefits">
+                        <li data-i18n="sponsors.silverBenefit1">Workshop session</li>
+                        <li data-i18n="sponsors.silverBenefit2">Logo on materials</li>
+                        <li data-i18n="sponsors.silverBenefit3">Social media mentions</li>
+                    </ul>
+                </div>
+
+                <div class="sponsor-tier sponsor-tier-bronze">
+                    <h3 data-i18n="sponsors.bronze">Community Partners</h3>
+                    <div class="sponsor-logos sponsor-logos-small">
+                        <div class="sponsor-placeholder" data-i18n="sponsors.yourLogo">Your Logo</div>
+                        <div class="sponsor-placeholder" data-i18n="sponsors.yourLogo">Your Logo</div>
+                        <div class="sponsor-placeholder" data-i18n="sponsors.yourLogo">Your Logo</div>
+                    </div>
+                    <ul class="sponsor-benefits">
+                        <li data-i18n="sponsors.bronzeBenefit1">Logo on website</li>
+                        <li data-i18n="sponsors.bronzeBenefit2">Event day presence</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sponsor-cta">
+                <a href="#apply-partner" class="btn btn-primary" data-i18n="sponsors.cta">Become a Partner</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply Section -->
+    <section class="section section-apply" id="apply">
+        <div class="container">
+            <h2 class="section-title section-title-center" data-i18n="apply.title">Join Us</h2>
+
+            <div class="apply-tabs">
+                <button class="apply-tab active" data-form="business" data-i18n="apply.tabBusiness">I'm a Business</button>
+                <button class="apply-tab" data-form="builder" data-i18n="apply.tabBuilder">I'm a Builder</button>
+                <button class="apply-tab" data-form="partner" data-i18n="apply.tabPartner">I'm a Partner</button>
+            </div>
+
+            <div class="apply-forms">
+                <!-- Business Form -->
+                <form class="apply-form active" id="apply-business" data-form="business">
+                    <div class="form-group">
+                        <label for="business-company" data-i18n="apply.business.company">Company Name</label>
+                        <input type="text" id="business-company" name="company" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="business-name" data-i18n="apply.business.name">Your Name</label>
+                            <input type="text" id="business-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="business-email" data-i18n="apply.business.email">Email</label>
+                            <input type="email" id="business-email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="business-issue" data-i18n="apply.business.issue">What's your #1 issue right now?</label>
+                        <textarea id="business-issue" name="issue" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="business-why" data-i18n="apply.business.why">Why should you be selected?</label>
+                        <textarea id="business-why" name="why" rows="3" required></textarea>
+                    </div>
+                    <input type="hidden" name="type" value="business">
+                    <button type="submit" class="btn btn-primary btn-full" data-i18n="apply.submit">Apply Now</button>
+                </form>
+
+                <!-- Builder Form -->
+                <form class="apply-form" id="apply-builder" data-form="builder">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="builder-name" data-i18n="apply.builder.name">Your Name</label>
+                            <input type="text" id="builder-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="builder-email" data-i18n="apply.builder.email">Email</label>
+                            <input type="email" id="builder-email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="builder-role" data-i18n="apply.builder.role">Your Role</label>
+                        <select id="builder-role" name="role" required>
+                            <option value="" data-i18n="apply.builder.roleSelect">Select your role...</option>
+                            <option value="developer" data-i18n="apply.builder.roleDev">Developer</option>
+                            <option value="designer" data-i18n="apply.builder.roleDesign">Designer</option>
+                            <option value="marketer" data-i18n="apply.builder.roleMarketing">Marketer</option>
+                            <option value="strategist" data-i18n="apply.builder.roleStrategy">Strategist</option>
+                            <option value="consultant" data-i18n="apply.builder.roleConsultant">Consultant</option>
+                            <option value="other" data-i18n="apply.builder.roleOther">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="builder-why" data-i18n="apply.builder.why">Why are you interested?</label>
+                        <textarea id="builder-why" name="why" rows="4" required></textarea>
+                    </div>
+                    <input type="hidden" name="type" value="builder">
+                    <button type="submit" class="btn btn-primary btn-full" data-i18n="apply.submit">Apply Now</button>
+                </form>
+
+                <!-- Partner Form -->
+                <form class="apply-form" id="apply-partner" data-form="partner">
+                    <div class="form-group">
+                        <label for="partner-company" data-i18n="apply.partner.company">Company Name</label>
+                        <input type="text" id="partner-company" name="company" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="partner-name" data-i18n="apply.partner.name">Contact Name</label>
+                            <input type="text" id="partner-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="partner-email" data-i18n="apply.partner.email">Email</label>
+                            <input type="email" id="partner-email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="partner-message" data-i18n="apply.partner.message">How would you like to partner?</label>
+                        <textarea id="partner-message" name="message" rows="4" required></textarea>
+                    </div>
+                    <input type="hidden" name="type" value="partner">
+                    <button type="submit" class="btn btn-primary btn-full" data-i18n="apply.submitPartner">Get in Touch</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="section section-location" id="location">
+        <div class="container">
+            <div class="location-grid">
+                <div class="location-info">
+                    <h2 class="section-title" data-i18n="location.title">The Venue</h2>
+                    <h3 class="location-name">Swiss Business School</h3>
+                    <p class="location-address">Poblenou, Barcelona</p>
+                    <p class="location-desc" data-i18n="location.desc">In the heart of Poblenou—Barcelona's innovation district. Former industrial warehouses turned tech hub. The perfect backdrop for building the future.</p>
+                </div>
+                <div class="location-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.5!2d2.1944!3d41.4036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPoblenou%2C%20Barcelona!5e0!3m2!1sen!2ses!4v1234567890"
+                        width="100%"
+                        height="300"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>IdeathonBcn</h3>
+                    <p data-i18n="footer.tagline">Where Barcelona Builds</p>
+                </div>
+                <div class="footer-links">
+                    <a href="mailto:hello@ideathonbcn.com" data-i18n="footer.contact">Contact</a>
+                    <a href="#" target="_blank">Twitter</a>
+                    <a href="#" target="_blank">LinkedIn</a>
+                </div>
+                <div class="footer-lang">
+                    <button class="lang-btn-footer" data-lang="en">EN</button>
+                    <button class="lang-btn-footer" data-lang="es">ES</button>
+                    <button class="lang-btn-footer" data-lang="ca">CA</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 IdeathonBcn. <span data-i18n="footer.rights">Made with 🧡 in Barcelona.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
