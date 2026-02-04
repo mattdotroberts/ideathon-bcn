@@ -132,6 +132,19 @@ const translations = {
         "location.title": "The Venue",
         "location.desc": "In the heart of Poblenou—Barcelona's innovation district. Former industrial warehouses turned tech hub. The perfect backdrop for building the future.",
 
+        // FAQ
+        "faq.title": "FAQ",
+        "faq.q1": "Is this event free?",
+        "faq.a1": "Yes! IdeathonBcn is completely free to attend for businesses and builders. We want to remove all barriers to participation.",
+        "faq.q2": "Do I need to be technical?",
+        "faq.a2": "Not at all. We welcome strategists, designers, marketers, and consultants alongside developers. Diverse teams build better solutions.",
+        "faq.q3": "What should I bring?",
+        "faq.a3": "Just your laptop and an open mind. We'll provide food, drinks, wifi, and everything else you need.",
+        "faq.q4": "How are teams formed?",
+        "faq.a4": "We match builders with businesses based on skills and interests. Each business gets a dedicated team for the day.",
+        "faq.q5": "What happens after the event?",
+        "faq.a5": "That's up to you! Many teams continue working together. We facilitate introductions but don't require any commitments.",
+
         // Footer
         "footer.tagline": "Where Barcelona Builds",
         "footer.contact": "Contact",
@@ -275,6 +288,19 @@ const translations = {
         "location.title": "El Lugar",
         "location.desc": "En el corazón de Poblenou—el distrito de innovación de Barcelona. Antiguos almacenes industriales convertidos en hub tech. El escenario perfecto para construir el futuro.",
 
+        // FAQ
+        "faq.title": "FAQ",
+        "faq.q1": "¿Es este evento gratuito?",
+        "faq.a1": "¡Sí! IdeathonBcn es completamente gratuito para empresas y builders. Queremos eliminar todas las barreras de participación.",
+        "faq.q2": "¿Necesito ser técnico?",
+        "faq.a2": "Para nada. Damos la bienvenida a estrategas, diseñadores, marketers y consultores junto con desarrolladores. Los equipos diversos construyen mejores soluciones.",
+        "faq.q3": "¿Qué debo traer?",
+        "faq.a3": "Solo tu portátil y una mente abierta. Nosotros proporcionamos comida, bebidas, wifi y todo lo que necesites.",
+        "faq.q4": "¿Cómo se forman los equipos?",
+        "faq.a4": "Emparejamos builders con empresas según habilidades e intereses. Cada empresa tiene un equipo dedicado para el día.",
+        "faq.q5": "¿Qué pasa después del evento?",
+        "faq.a5": "¡Eso depende de ti! Muchos equipos continúan trabajando juntos. Facilitamos las presentaciones pero no requerimos ningún compromiso.",
+
         // Footer
         "footer.tagline": "Donde Barcelona Construye",
         "footer.contact": "Contacto",
@@ -417,6 +443,19 @@ const translations = {
         // Location
         "location.title": "El Lloc",
         "location.desc": "Al cor de Poblenou—el districte d'innovació de Barcelona. Antics magatzems industrials convertits en hub tech. L'escenari perfecte per construir el futur.",
+
+        // FAQ
+        "faq.title": "FAQ",
+        "faq.q1": "És gratuït aquest event?",
+        "faq.a1": "Sí! IdeathonBcn és completament gratuït per a empreses i builders. Volem eliminar totes les barreres de participació.",
+        "faq.q2": "Necessito ser tècnic?",
+        "faq.a2": "De cap manera. Donem la benvinguda a estrategues, dissenyadors, màrqueters i consultors juntament amb desenvolupadors. Els equips diversos construeixen millors solucions.",
+        "faq.q3": "Què haig de portar?",
+        "faq.a3": "Només el teu portàtil i una ment oberta. Nosaltres proporcionem menjar, begudes, wifi i tot el que necessitis.",
+        "faq.q4": "Com es formen els equips?",
+        "faq.a4": "Emparellem builders amb empreses segons habilitats i interessos. Cada empresa té un equip dedicat per al dia.",
+        "faq.q5": "Què passa després de l'event?",
+        "faq.a5": "Això depèn de tu! Molts equips continuen treballant junts. Facilitem les presentacions però no requerim cap compromís.",
 
         // Footer
         "footer.tagline": "On Barcelona Construeix",
